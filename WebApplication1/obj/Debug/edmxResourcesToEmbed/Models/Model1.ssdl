@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyExamDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LoginTB">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderDetailsTB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemId" Type="int" />
+    <Property Name="ODate" Type="date" />
+    <Property Name="Purchase_Quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="StockInfoTB">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" MaxLength="50" />
+    <Property Name="company" Type="varchar" MaxLength="50" />
+    <Property Name="Available_Quantity" Type="int" />
+    <Property Name="Prize" Type="int" />
+  </EntityType>
+  <EntityContainer Name="MyExamDBModelStoreContainer">
+    <EntitySet Name="LoginTB" EntityType="Self.LoginTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetailsTB" EntityType="Self.OrderDetailsTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockInfoTB" EntityType="Self.StockInfoTB" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

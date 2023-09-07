@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyExamDBModelStoreContainer" CdmEntityContainer="MyExamDBEntities">
+    <EntitySetMapping Name="LoginTBs">
+      <EntityTypeMapping TypeName="MyExamDBModel.LoginTB">
+        <MappingFragment StoreEntitySet="LoginTB">
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetailsTBs">
+      <EntityTypeMapping TypeName="MyExamDBModel.OrderDetailsTB">
+        <MappingFragment StoreEntitySet="OrderDetailsTB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ODate" ColumnName="ODate" />
+          <ScalarProperty Name="Purchase_Quantity" ColumnName="Purchase_Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockInfoTBs">
+      <EntityTypeMapping TypeName="MyExamDBModel.StockInfoTB">
+        <MappingFragment StoreEntitySet="StockInfoTB">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="Available_Quantity" ColumnName="Available_Quantity" />
+          <ScalarProperty Name="Prize" ColumnName="Prize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

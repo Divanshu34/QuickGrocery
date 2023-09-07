@@ -1,0 +1,36 @@
+﻿@model List<WebApplication1.Models.StockInfoTB>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hovered">
+            <tbody>
+                <tr>
+                    <th>Item Id</th>
+                    <th>Item Name</th>
+                    <th>company</th>
+                    <th>Available Quantity</th>
+                    <th>Prize</th>
+                </tr>
+
+                @foreach (var stockList in Model)
+                {
+                    <tr>
+                        <td><a href="/Details/Details/@stockList.ItemId" value="" />@stockList.ItemId</td>
+                        <td>@stockList.ItemName</td>
+                        <td>@stockList.company</td>
+                        <td>@stockList.Available_Quantity</td>
+                        <td>@stockList.Prize</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@model WebApplication1.Models.StockInfoTB
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form action="/Purchase/Purchase/@Model.ItemId" method="post">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hovered">
+                <tr>
+                    <td>Item ID</td>
+                    <td name="ItemId" value="@Model.ItemId">@Model.ItemId</td>
+                </tr>
+                <tr>
+                    <td>Item Name</td>
+                    <td name="ItemName" value="@Model.ItemName">@Model.ItemName</td>
+                </tr>
+                <tr>
+                    <td>Comapny Name</td>
+                    <td name="company" value="@Model.company">@Model.company</td>
+                </tr>
+                <tr>
+                    <td>Available Quantity</td>
+                    <td name="Available_Quantity" value="@Model.Available_Quantity">@Model.Available_Quantity</td>
+                </tr>
+                <tr>
+                    <td>Prize</td>
+                    <td name="Prize" value="@Model.Prize">@Model.Prize</td>
+                </tr>
+                <tr>
+                    <td>Purchase Quantity</td>
+                    <td><input type="number" name="PurchaseQuantity" value="" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="btn" value="Purchase" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            @ViewBag.message
+        </div>
+    </form>
+    
+</body>
+</html>
